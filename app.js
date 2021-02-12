@@ -2,7 +2,7 @@
 
 // set event listeners on each button, do math, and update DOM
 
-
+import { add, sub, mul, div } from '../utilities.js';
 
 // addition
 const addOne = document.getElementById('add1-input');
@@ -11,9 +11,8 @@ const addButton = document.getElementById('add-nums');
 const addResult = document.getElementById('add-result');
 
 addButton.addEventListener('click', () => {
-//    console.log('add button works!');
-    addResult.textContent = Number(addOne.value) + Number(addTwo.value);
-
+  //  addResult.textContent = Number(addOne.value) + Number(addTwo.value);
+      addResult.textContent = add(Number(addOne.value), Number(addTwo.value));
 });
 
 //subtraction
@@ -23,8 +22,8 @@ const subButton = document.getElementById('sub-nums');
 const subResult = document.getElementById('sub-result')
 
 subButton.addEventListener('click', () => {
-//   console.log('sub button works!');
-    subResult.textContent = Number(subOne.value) - Number(subTwo.value);
+  //  subResult.textContent = Number(subOne.value) - Number(subTwo.value);
+      subResult.textContent = sub(Number(subOne.value), Number(subTwo.value));
   });
 
 //mulitiplication
@@ -34,8 +33,8 @@ const mulButton = document.getElementById('mul-nums');
 const mulResult = document.getElementById('mul-result');
 
 mulButton.addEventListener('click', () => {
-//        console.log('multiply button works!');
-        mulResult.textContent = Number(mulOne.value) * Number(mulTwo.value);
+// mulResult.textContent = Number(mulOne.value) * Number(mulTwo.value);
+   mulResult.textContent = mul(Number(mulOne.value), Number(mulTwo));
   });
 
 //division
@@ -45,8 +44,8 @@ const divButton = document.getElementById('div-nums');
 const divResult = document.getElementById('div-result');
 
 divButton.addEventListener('click', () => {
-//    console.log('div button works!');
-    divResult.textContent = Number(divOne.value) / Number(divTwo.value);
+//  divResult.textContent = Number(divOne.value) / Number(divTwo.value);
+    divResult.textContent = div(Number(divOne.value), Number(divTwo.value));
 });
 
 
